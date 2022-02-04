@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  h1 {
+    color: #426696;
+    font-weight: 600;
+    font-size: 3rem;
+    opacity: 0.8;
+  }
+  h2,
+  p {
+    color: #658ec6;
+    font-weight: 500;
+    opacity: 0.8;
+  }
+  
+  h3 {
+    color: #426696;
+    font-weight: 600;
+    opacity: 0.8;
+  }
+
+
+
+main {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to right top,#B40431 , #156875);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .glass {
+    background: white;
+    min-height: 80vh;
+    width: 60%;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.3)
+    );
+    border-radius: 2rem;
+    z-index: 2;
+    backdrop-filter: blur(1rem);
+    display: flex;
+    overflow: hidden;
+   
+  }
+  img{
+      border-radius: 50%;
+      height: 80px;
+      width: 80px;
+  }
+
+  .dashboard{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    );
+    border-radius: 2rem;
+  }
+      
+   input {
+       all:unset;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    );
+    border: none;
+    width: 80%;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    margin-bottom: 30px;
+    height: 40px;
+ 
+  }
+  
+  .add{
+       all: unset;
+      color: white;      
+      border: #426696 1px solid ;
+      border-radius: 30px;
+      padding: 10px;
+      font-size: 30px;
+background-color: #426696;
+   
+  }
+  .add:hover{
+      background-color: transparent;
+      border-color: white;
+      color: white;
+  }
+
+
+  .done ,.top ,.remove{
+    all: unset;
+    border: white 1px solid ;
+    border-radius: 30px;
+    background-color: transparent;
+
+    color: white;
+    padding: 10px 20px;
+  }
+
+
+  .remove:hover{
+    background-color: white;
+    border-color:white ;
+    color: #B40431;
+  font-weight: bolder;
+  }
+
+  .done:hover{
+    background-color: white;
+    border-color:white ;
+    color:#426696 ;
+  font-weight: bolder;
+  }
+
+  .top:hover{
+    background-color: white;
+    border-color:white ;
+    color:#E3F11C;
+  font-weight: bolder;
+  }
+
+
+  .games {
+padding: 60px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+   
+  }
+  .cards{
+    overflow: hidden;
+    overflow-y: scroll;
+    min-height:  60vh; ;
+
+}
+  
+  .card {
+    display: flex;
+    background: linear-gradient(
+      to left top,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.5)
+    );
+    
+    border-radius: 1rem;
+    margin: 2rem 0rem;
+    padding: 2rem;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+   justify-content: space-between;
+  }
+  
+ 
+ 
+
+
+  .circle1,
+.circle2, .circle3,
+.circle4  {
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.3)
+  );
+  height: 10rem;
+  width: 10rem;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle1 {
+    top: 20%;
+    right: 5%;
+  }
+  .circle2 {
+    top:-5%;
+ 
+  }
+
+  .circle3 {
+    top: 5%;
+    right: 15%;
+  }
+  .circle4 {
+    bottom: 20%;
+    left: 10%;
+  }
+
+  .no{
+   
+    display: none;
+}
+
+.back{
+    all: unset;
+    color: white;      
+    border: white 1px solid ;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 25px;
+background-color: transparent;
+display: none;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+
+}
+
+.line{
+    text-decoration-line: line-through;
+}
+
+.imp{
+    background-color:#E3F11C ;
+     color: white;
+}
+.back:hover{
+    background-color: white;
+    border-color:white ;
+    color:#426696 ;
+ 
+  }
+  .flex{
+      display: flex;
+      justify-content: space-around;
+  }
+  
+  @media  screen and (max-width:1000px){
+    .dashboard{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right top,#B40431 , #156875);
+        opacity: 0.7;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+      z-index: 100;
+    }
+    .no{
+      display: block;
+      
+    }
+    .games {
+        min-width: 100%;
+    }
+    .cards{
+        width: 100%;
+    }
+    .back{
+        display: block;
+    }
+    .active{
+        transform: translateX(0%);
+
+    }
+}
